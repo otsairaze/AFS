@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 24px;
+  background-color: var(--background-aside);
+  border-radius: 16px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -13,7 +13,7 @@ export const useNavigation = () => {
   const items: NavItem[] = [
     {
       svg: LogoSvg,
-      path: ['/']
+      path: '/'
     },
     {
       svg: ProcessManagerSvg,

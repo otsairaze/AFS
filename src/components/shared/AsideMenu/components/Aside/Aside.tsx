@@ -3,6 +3,7 @@ import { AsideLayout } from '@/layouts';
 import { useNavigation } from '../Navigation/hooks';
 import styles from './Aside.module.scss';
 import { SubItemButton } from './components';
+import { Link } from 'react-router';
 
 export const Aside = () => {
   const { items } = useNavigation();
@@ -28,7 +29,9 @@ export const Aside = () => {
       <div className={styles.asideItem}>
         {items.flatMap((item) =>
           item.subItems?.map((subItem, subIndex) => (
-            <SubItemButton key={subIndex} subItem={subItem} />
+            <Link to={subItem.path}>
+              <SubItemButton key={subIndex} subItem={subItem} />
+            </Link>
           ))
         )}
       </div>

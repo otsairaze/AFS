@@ -1,4 +1,8 @@
 .layout {
   display: flex;
-  justify-content: space-between;
+  background-color: var(--background-primary);
+
+  .main {
+    padding-block: 40px;
+  }
 }

@@ -4,7 +4,12 @@ import styles from './Typography.module.scss';
 
 type TagVariant = 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
-type TypographyVariant = 'title20_semibold' | 'paragraph16_regular';
+type TypographyVariant =
+  | 'title62_semibold'
+  | 'title32_semibold'
+  | 'title28_medium'
+  | 'title20_semibold'
+  | 'paragraph16_regular';
 
 type TypographyProps<T extends TagVariant> = ComponentProps<T> & {
   tag: TagVariant;

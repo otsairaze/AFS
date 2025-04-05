@@ -4,13 +4,13 @@ import styles from './MainLayout.module.scss';
 
 export const MainLayout = () => {
   return (
-    <>
+    <div className={styles.layout}>
       <AsideMenu />
-      <Container className={styles.layout}>
+      <Container>
         <main className={styles.main}>
           <Outlet />
         </main>
       </Container>
-    </>
+    </div>
   );
 };
