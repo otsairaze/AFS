@@ -1,5 +1,5 @@
-import { Aside, Navigation } from './components';
 import styles from './AsideMenu.module.scss';
+import { Aside, Navigation } from './components';
 
 export const AsideMenu = () => {
   return (

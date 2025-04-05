@@ -16,7 +16,7 @@ export const AsideLayout = ({
   return (
     <div className={styles.aside}>
       <div className={styles.content}>
-        <div>
+        <div className={styles.header}>
           {renderHeader && renderHeader()}
           {renderSubHeader && renderSubHeader()}
         </div>

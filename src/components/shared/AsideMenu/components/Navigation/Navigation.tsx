@@ -1,7 +1,9 @@
-import { Link } from 'react-router';
-import { Button } from '../../../..';
+import { SvgProvider } from '@/assets/svg/SvgProvider';
+import { useNavigation } from './hooks/useNavigation';
 import styles from './Navigation.module.scss';
-import { useNavigation } from './useNavigation';
+import { Button } from '@/components/ui';
+import { Link } from 'react-router';
+
 export const Navigation = () => {
   const { items } = useNavigation();
 
@@ -15,7 +17,7 @@ export const Navigation = () => {
           data-push-down={index === 3 ? 'true' : undefined}
         >
           <Link to={Array.isArray(item.path) ? item.path[0] : item.path}>
-            <item.svg />
+            <SvgProvider variant='svg-primary' SvgComponent={item.svg} />
           </Link>
         </Button>
       ))}

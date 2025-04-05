@@ -8,7 +8,7 @@ interface ButtonProps extends ComponentProps<'button'> {
   variant: ButtonVariants;
 }
 
-type ButtonVariants = 'primary' | 'outlined' | 'none' | 'navigation';
+type ButtonVariants = 'primary' | 'outlined' | 'none' | 'navigation' | 'border';
 
 export const Button = ({ children, variant, className, ...props }: ButtonProps) => {
   return (

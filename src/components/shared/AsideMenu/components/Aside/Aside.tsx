@@ -1,7 +1,12 @@
-import { AsideLayout } from '../../../../../layouts';
-import { Typography } from '../../../Typography/Typography';
+import { Typography } from '@/components';
+import { AsideLayout } from '@/layouts';
+import { useNavigation } from '../Navigation/hooks';
+import styles from './Aside.module.scss';
+import { SubItemButton } from './components';
 
 export const Aside = () => {
+  const { items } = useNavigation();
+
   return (
     <AsideLayout
       renderHeader={() => (
@@ -20,7 +25,13 @@ export const Aside = () => {
         </Typography>
       )}
     >
-      <div>test</div>
+      <div className={styles.asideItem}>
+        {items.flatMap((item) =>
+          item.subItems?.map((subItem, subIndex) => (
+            <SubItemButton key={subIndex} subItem={subItem} />
+          ))
+        )}
+      </div>
     </AsideLayout>
   );
 };

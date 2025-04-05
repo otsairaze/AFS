@@ -6,14 +6,8 @@ import {
   ProcessManagerSvg,
   SearchSvg,
   SettingsSvg
-} from '../../../../../assets/svg';
-
-interface NavItem {
-  svg: React.ElementType;
-  path: string[] | string;
-  title?: string;
-  subItems?: NavItem[];
-}
+} from '@/assets/svg';
+import { NavItem } from '@/types/NavItemTypes';
 
 export const useNavigation = () => {
   const items: NavItem[] = [
@@ -25,17 +19,21 @@ export const useNavigation = () => {
       svg: ProcessManagerSvg,
       path: '/process-manager',
       title: 'Process Manager',
+
       subItems: [
         {
           svg: ProcessManagerSvg,
+          title: 'Organizations',
           path: '/organization'
         },
         {
           svg: ContractSvg,
+          title: 'Contractors',
           path: '/contract'
         },
         {
           svg: ClientsSvg,
+          title: 'Clients',
           path: '/clients'
         }
       ]

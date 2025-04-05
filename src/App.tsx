@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router';
+import { MainLayout } from './layouts';
 import { routes } from './routes';
 import Organization from './pages/Organization';
-import { MainLayout } from './layouts';
 
 function App() {
   return (

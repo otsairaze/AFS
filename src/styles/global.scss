@@ -6,3 +6,15 @@
 body {
   font-family: Poppins-Custom;
 }
+
+.svg {
+  stroke: var(--svg-primary);
+}
+
+.svg-primary {
+  stroke: var(--svg-primary);
+}
+
+.svg-secondary {
+  stroke: var(--svg-secondary);
+}
