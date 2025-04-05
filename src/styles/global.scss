@@ -1,0 +1,8 @@
+@use './normalize.scss' as *;
+@use './reset.scss' as *;
+@use './fonts.scss' as *;
+@use './vars.scss' as *;
+
+body {
+  font-family: Poppins-Custom;
+}
