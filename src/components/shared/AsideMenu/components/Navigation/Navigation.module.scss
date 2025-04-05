@@ -12,21 +12,7 @@
   padding-block: 10px;
   padding-inline: 10px;
 
-  .navButton {
-    background: none;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    &[data-push-down='true'] {
-      margin-top: auto;
-    }
+  .navButton[data-push-down='true'] {
+    margin-top: auto;
   }
 }

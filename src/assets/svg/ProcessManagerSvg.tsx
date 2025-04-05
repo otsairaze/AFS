@@ -4,7 +4,7 @@ export const ProcessManagerSvg = (props: ComponentProps<'svg'>) => {
   return (
     <svg
       {...props}
-      fill='#ffffff'
+      fill='var(--svg-primary)'
       height='30px'
       width='30px'
       version='1.1'

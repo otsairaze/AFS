@@ -11,6 +11,7 @@ import {
 interface NavItem {
   svg: React.ElementType;
   path: string[] | string;
+  title?: string;
   subItems?: NavItem[];
 }
 
@@ -23,6 +24,7 @@ export const useNavigation = () => {
     {
       svg: ProcessManagerSvg,
       path: '/process-manager',
+      title: 'Process Manager',
       subItems: [
         {
           svg: ProcessManagerSvg,
