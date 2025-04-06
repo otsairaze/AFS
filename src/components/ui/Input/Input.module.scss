@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 30px;
+  border: 1px solid transparent;
+  border-radius: 70px;
+  color: #000;
+}
+
+.primary {
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search {
+  max-width: 350px;
+  background-color: #17212b;
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+}
+
+.secondary {
+  background-color: #2d3f50;
+}
+
+.error {
+  color: red;
+  text-align: start;
+  border-color: red;
+}
+
+.svg_inner {
+  display: flex;
+  align-items: center;
+  border-radius: 70px;
+  font-size: 16px;
+  gap: 30px;
+}

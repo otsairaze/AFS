@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router';
 import { MainLayout } from './layouts';
 import { routes } from './routes';
-import OrganizationPage from './pages/OrganizationPage';
+import { OrganizationPage, SearchPage } from './pages';
 
 function App() {
   return (
@@ -12,6 +12,9 @@ function App() {
         </Route>
         <Route element={<MainLayout />}>
           <Route path={routes.organization} element={<OrganizationPage />} />
+        </Route>
+        <Route element={<MainLayout />}>
+          <Route path={routes.search} element={<SearchPage />} />
         </Route>
       </Routes>
     </Router>

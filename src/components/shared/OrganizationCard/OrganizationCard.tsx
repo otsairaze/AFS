@@ -1,9 +1,14 @@
 import { Typography } from '@/components/shared/Typography/Typography';
 import { Button } from '@/components/ui';
 import styles from './OrganizationCard.module.scss';
+import { observer } from 'mobx-react-lite';
 import { OrganizationInfo } from './components';
 
-export const OrganizationCard = () => {
+interface OrganizationCardProps {
+  cards: any;
+}
+
+export const OrganizationCard = observer(({ cards }: OrganizationCardProps) => {
   return (
     <div className={styles.wrapper}>
       <div>
@@ -15,11 +20,11 @@ export const OrganizationCard = () => {
         </div>
 
         <div className={styles.info}>
-          <OrganizationInfo />
-          <OrganizationInfo />
-          <OrganizationInfo />
+          {cards.cards.map((card) => (
+            <OrganizationInfo key={card.name} data={card} />
+          ))}
         </div>
       </div>
     </div>
   );
-};
+});
